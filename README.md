@@ -300,16 +300,19 @@ Lets assume we have two FF's A and B connected together by a combinational block
 
 Here the speed of operation of the total digital circuit depends on the delay in the combinational logic block. The time period of the clock must be atleast greater than the propagation delay of FF-A + delay in the combinational logic part + setup time of the FF-B. **So to increase the speed of operation or to achieve maximum clock speed for the digital circuit we need *faster cells* in the combinational logic block.** 
 
+### Introduction to logic synthesis part-2
+
 **Why do we need slow cells ?**
 
 Silmiar to setup time there is hold time for FF-B. Hold time is the minimum time required for the input to latched at FF-A and the time after which the input is captured at FF-B. The minimum delay time should be graeter than the hold time of FF-B. Hold time of FF-B is less than propagation delay of FF-A + delay in the combinational logic part. To ensure that there are no "HOLD" issues at DFF_B, we need cells that work slowly.
 
-- **Hence we need cells that work fast to meet the required performance and we need cells that work slow to meet HOLD time**
-- **The collection of various types of cells forms the .lib**
+- *Hence we need cells that work fast to meet the required performance and we need cells that work slow to meet HOLD time*
+- *The collection of various types of cells forms the .lib*
 
+**Faster cells vs Slower cells**
 
-### Introduction to logic synthesis part-2
-
+- Faster cells require fast charging/ discharging of the capacitor which requires high current and this is possible for wider width transistors which occupy more space and consume more power.
+- Slower cells require slow charging/ discharging of the capacitor which requires low current and this is possible for small width transistors which occupy less space and consume less power.
 
 
 # Author
