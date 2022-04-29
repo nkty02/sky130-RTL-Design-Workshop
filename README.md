@@ -260,6 +260,21 @@ Here we can see that the testbench instantiates the design good_mux. We can also
 
 ### Introduction to Yosys
 
+[Yosys](https://www.yosyshq.com/open-source) is a open source framework used for RTL synthesis and more. A synthesizer is a tool used for converting the RTL design into netist. [Yosys](https://www.yosyshq.com/open-source) is the synthesizer that we use in this course. To obtain the netlist we need to input 2 files: RTL design file and the .lib file to the synthesizer, here Yosys. 
+
+**Netlist is the representation of the RTL design using the standard cells present in the inputted .lib libaray file**
+
+The flow of synthesis and Yosys setup is as follows:
+
+- we have read_verilog command to read the RTL design
+- read_liberty command to read the .lib file
+- write_verilog command to write out the netlist file
+
+![image](https://user-images.githubusercontent.com/75198926/165951354-8ca34005-4f19-4f6d-9bb5-34567d61b06b.png)
+
+
+
+
 ### Introduction to logic synthesis part-1
 
 ### Introduction to logic synthesis part-2
