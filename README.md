@@ -915,8 +915,38 @@ write_verilog good_mux_netlist.v
 ![image](https://user-images.githubusercontent.com/75198926/165987648-0e738b34-3b68-426a-88f4-ae7a358d6298.png)
 
 
+## Day 2: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
+
+### Introduction to timing .libs
+
+In this section we looked that exactly a .lib library file contains. We used the following command to open the sky130_fd_sc_hd__tt_025C_1v80.lib library file :
+
+```
+gvim ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+The following library file opens:
+
+![image](https://user-images.githubusercontent.com/75198926/165990583-4e3d5c44-795e-4988-b6f5-ab53bf85f25e.png)
+
+- The first line tells the name of the library it's **sky130_fd_sc_hd__tt_025C_1v80.lib**. It is a 130nm technology library(sky130 idicates this) and *tt* indicates that this library is typical library and the *025C* indicates that temperature is 25 degrees celsius for this library, and *1v80* indicates that the rail voltage for this library is 1.8Volts. These parameters are called PVT (Process Voltage Temperature) and these parameters determine how my silicon is going to work faster or typical or slower. We also have studied how these PVT variations occur during fabrication and why is it important to consider PVT variations while designing our circuit. 
+- This also tells that CMOS technology is used in this library. And the delay model is the lookup table model. Units of time, power, current, voltage, capacitance, resistance are also mentioned in the library. Operation conditions is as follows :
+
+![image](https://user-images.githubusercontent.com/75198926/165993613-8731443c-a097-48ad-9484-89018ea908cf.png)
+
+- In the library we can see that there are many types of cells. The following figures shows different types of cells present in the **sky130_fd_sc_hd__tt_025C_1v80.lib** library. 
+
+![image](https://user-images.githubusercontent.com/75198926/165994720-0144fa10-d996-4931-b24c-609135ead043.png)
 
 
+- We can see the features of a particular cell by using the following command :
+```
+:sp ../my_lib/verilog_model/sky130_fd_sc_hd__a2111o.behavioral.v
+```
+We can also see the leakage power, timing information, input capacitance, delay associated with each pins.
+
+- 
+-  
 
 # Author
 # Acknowledgements
