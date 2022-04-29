@@ -101,8 +101,8 @@ A simulator is a tool used to check the functionality of a design. RTL design is
 ![image](https://user-images.githubusercontent.com/75198926/165926114-1a6a40df-667c-45fb-bc30-62aa8ca97a17.png)
 
 
-# Labs using iverilog and gtkwave
-## Introduction to lab
+## Labs using iverilog and gtkwave
+### Introduction to lab
 
 First we need to create a directory named VLSI to install the tools required to perform during this workshop. For that we open the home folder in the terminal and from there VLSI folder is created in home folder using ``` mkdir VLSI ``` command in the terminal. Then we enter that directory using the command ``` cd VLSI ``` to do git cloning. The vsdflow tools are already installed in our system so we need not do any git cloning for vsdflow tools installation. We did git cloning from this website **https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git** using the command ``` git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git ```. The contents present in that directory after git cloning is as shown in below figure.
 
@@ -176,7 +176,7 @@ blocking_caveat.v  dff_const1.v		   good_shift_reg.v    mux_generate.v		tb_bad_c
 
 ```
 
-## Introduction to iverilog gtkwave part-1
+### Introduction to iverilog gtkwave part-1
 
 In this lab we are going to see how to work with iverilog and gtkwave. 
 
@@ -227,6 +227,42 @@ Now gtkwave window will appear where we can see the testbench tb_good_mux and un
 Here we can observe the multiplexer operation i.e., 
 - whenever sel = 0; then output is following i0 (y = i0) and 
 - whenever sel = 1; then output is following i1 (y = i1)
+
+
+### Introduction to iverilog gtkwave part-2
+
+Now we look into the RTL design and corresponding testbench files for good_mux design.
+To view those files we use the following command :
+``` gvim tb_good_mux.v -o good_mux.v ```
+
+A new window opens where the good_mux(design file) and tb_good_mux(testbench file) are opened. 
+
+![image](https://user-images.githubusercontent.com/75198926/165939444-b308cc31-dbdb-42a0-90a7-fc5b2268cdb4.png)
+
+**Design file - good_mux.v** :
+
+It contains the verilog code of multiplexer implementation. The module was named as good_mux. And it takes 3 inputs i0, i1, sel and gives 1 output y. The logic is as follows :
+
+- If (sel = 1)
+
+    - then y = i1 
+  
+- elseif (sel = 0)
+
+    - then y = i0
+  
+**Testbench file - tb_good_mux.v** :  
+
+Here we can see that the testbench instantiates the design good_mux. We can also observe that the testbench doesn't contain any rimary inputs or primary outputs. We always call the design instantiation as UUT(Unit Under Test) or DUT(Design Under Test). Then we start dumping the .vcd file named *tb_good_mux.vcd*. Then we have the stimulus generator, it says that initially sel = 0; i0 = 0; i1 = 0 and we are running the simulator for 300nsec and stopping the simulation. Then we apply inputs to our design by toggling the sel, i0, i1 signals. Here we don't have any stimulus observer we are just dumping the output to .vcd file named *tb_good_mux.vcd* and then view the output waveform using gtkwave.
+
+
+## Introduction to Yosys and logic synthesis
+
+### Introduction to Yosys
+
+### Introduction to logic synthesis part-1
+
+### Introduction to logic synthesis part-2
 
 
 
