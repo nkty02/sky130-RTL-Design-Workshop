@@ -1,5 +1,7 @@
 # RTL design using Verilog with SKY130 Technology
 
+This repository is created to document all the theory and labs done as a part of cloud based 5-day workshop on RTL design using verilog with sky130 technology.
+
 ![image](https://user-images.githubusercontent.com/75198926/165884648-3ef050ce-e181-46d6-a8af-00eaa7f70260.png)
 
 # Table of contents
