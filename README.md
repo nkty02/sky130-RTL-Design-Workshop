@@ -314,6 +314,8 @@ Silmiar to setup time there is hold time for FF-B. Hold time is the minimum time
 - Faster cells require fast charging/ discharging of the capacitor which requires high current and this is possible for wider width transistors which occupy more space and consume more power.
 - Slower cells require slow charging/ discharging of the capacitor which requires low current and this is possible for small width transistors which occupy less space and consume less power.
 
+*Therefore, we need to guide the synthesizer to select the flavour of cells that is optimum for the implementation of logic circuit.*
+
 
 # Author
 # Acknowledgements
