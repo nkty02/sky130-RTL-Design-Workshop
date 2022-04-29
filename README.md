@@ -272,10 +272,41 @@ The flow of synthesis and Yosys setup is as follows:
 
 ![image](https://user-images.githubusercontent.com/75198926/165951354-8ca34005-4f19-4f6d-9bb5-34567d61b06b.png)
 
+**Verification of synthesis:**
 
+For verification of the synthesis done by Yosys we use the simulator iverilog. We input netlist and the testbench to the iverilog simulator and if we get the output .vcd file same as previous .vcd file named as "tb_good_mux.vcd", then our synthesis is correct. The flow diagram is shown below:
+
+![image](https://user-images.githubusercontent.com/75198926/165955010-2da013f7-8402-4921-8031-e4a3f83ac6d0.png)
+
+**Note** : The set of primary inputs and primary outputs remains same between the RTL design and the synthesized netlist. So we can use the same testbech to simulate both the files. 
 
 
 ### Introduction to logic synthesis part-1
+
+**RTL Design** : It is the behavioural representation at the Register-Transfer-Level of the given specifications in a Verilog Hardware Description Language(VHDL). 
+
+**Synthesis** : Synthesis is used to map the RTL code to the digital hardware design(netlist). It make the RTL to gate level transition. The design is converted into gates and the connections are made between the gates. This is given out as a Netlist file. The follwing is the flow diagram of the synthesis process. 
+
+![image](https://user-images.githubusercontent.com/75198926/165958406-58a613bd-875a-44b8-9ca7-e1c2434484eb.png)
+
+**What is .lib ?** 
+
+It is the collection of the logical modules which includes all basic logical gates like and, or, nor, nand, etc.. It also contains different flavours of the same gate like slow, medium, fast all 3 versions of 2-input nand gate and 3-input nand gate and so on.
+
+**Why do we need different flavours of same gate ?**
+
+Lets assume we have two FF's A and B connected together by a combinational block as shown in below figure. 
+![image](https://user-images.githubusercontent.com/75198926/165960559-20ab0807-0577-4942-aeea-682514a9d1c8.png)
+
+Here the speed of operation of the total digital circuit depends on the delay in the combinational logic block. The time period of the clock must be atleast greater than the propagation delay of FF-A + delay in the combinational logic part + setup time of the FF-B. **So to increase the speed of operation or to achieve maximum clock speed for the digital circuit we need *faster cells* in the combinational logic block.** 
+
+**Why do we need slow cells ?**
+
+Silmiar to setup time there is hold time for FF-B. Hold time is the minimum time required for the input to latched at FF-A and the time after which the input is captured at FF-B. The minimum delay time should be graeter than the hold time of FF-B. Hold time of FF-B is less than propagation delay of FF-A + delay in the combinational logic part. To ensure that there are no "HOLD" issues at DFF_B, we need cells that work slowly.
+
+- **Hence we need cells that work fast to meet the required performance and we need cells that work slow to meet HOLD time**
+- **The collection of various types of cells forms the .lib**
+
 
 ### Introduction to logic synthesis part-2
 
