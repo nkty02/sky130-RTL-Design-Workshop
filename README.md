@@ -57,6 +57,14 @@
 
 # Brief description of workshop
 
+The goal of this workshop is to teach the verilog coding principles, which produce predictable logic in silicon. It's vital to remember that not all verilog code is synthesizable, and even if it is, alternative logic may result depending on the coding style utilised. All of these components of the Verilog HDL are covered in depth in this course, which includes both theory and plenty of practical examples. 
+This workshop will train you:
+- How to construct digital logic using Verilog HDL. 
+- Using Functional Simulation to verify the design's functionality. 
+- Writing Test Benches to ensure the RTL design's functionality. 
+- Synthesis of the Functional RTL Code's logic. 
+- Simulate the synthesized netlist at the gate level.
+
 # Author
 # Acknowledgements
 #
