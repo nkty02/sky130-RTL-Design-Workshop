@@ -945,7 +945,8 @@ The following library file opens:
 ```
 We can also see the leakage power, timing information, input capacitance, delay associated with each pins.
 
-- 
+- ![image](https://user-images.githubusercontent.com/75198926/166003829-525aac0a-fc41-479e-8c53-f237d40f31e5.png)
+
 -  
 
 # Author
