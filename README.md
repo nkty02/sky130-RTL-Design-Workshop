@@ -1180,8 +1180,16 @@ negedge reset
 
 ![image](https://user-images.githubusercontent.com/75198926/166118174-17047699-28c7-4e8b-a9c9-5474093a7e9b.png)
 
-
 ![image](https://user-images.githubusercontent.com/75198926/166118274-52967360-a3bf-4ad2-8bc3-2e933882d9de.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166119232-5c153a0f-a84f-49c7-af7a-9f84b901ca36.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166119306-8e6740e5-4f9d-48cf-9500-a56e5cd16722.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166119357-db6b052d-3779-4739-a56a-802fcc4b2f55.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166119407-ffdd2ec3-9e35-4b58-b233-e82ab49b36ee.png)
+
 
 
 
