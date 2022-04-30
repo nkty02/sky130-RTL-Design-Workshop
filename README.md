@@ -1105,6 +1105,34 @@ negedge reset
 
 ![image](https://user-images.githubusercontent.com/75198926/166107769-db3f1832-d799-4a6e-85a0-8ae25bda2b6b.png)
 
+# Day 3
+## Combi logic optimization
+
+**opt_check**
+ 
+![image](https://user-images.githubusercontent.com/75198926/166110009-06cd2f44-e853-4b87-8e09-0d5fd676b155.png)
+ 
+ ![image](https://user-images.githubusercontent.com/75198926/166110374-fba5c8f5-6414-4255-809e-6f98ea811b1e.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166110427-60b2efc9-0e71-4682-978c-f891d1f3682b.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166110441-e0578cc2-222a-4991-9f08-df49d20836b5.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166110463-4b1710a2-a878-41b2-b3c1-00b35aad23b2.png)
+
+**opt_check2**
+
+![image](https://user-images.githubusercontent.com/75198926/166110592-f41b5608-1fd7-4016-9444-407df6eceb03.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166110608-0aa38ff6-a43b-48b3-90a7-fffdc4248bf8.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166110636-4756c7cf-4a1d-453b-97b3-0b64c4d0cc7b.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166110657-9f94f6b4-3929-405c-8f7e-24b300da067b.png)
+
+
+
+
 
 # Author
 # Acknowledgements
