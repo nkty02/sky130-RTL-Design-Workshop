@@ -1156,8 +1156,32 @@ negedge reset
 ![image](https://user-images.githubusercontent.com/75198926/166113169-b1ad1563-8389-4d2d-8a1b-6dd00367b7ed.png)
 
 
+## Sequential Logic Optimization**
+
+![image](https://user-images.githubusercontent.com/75198926/166116806-7dcf8e9b-359b-4a87-a8ff-aa58d164269d.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166117056-bf1191e1-baf5-4c19-98ab-4b081656a8c6.png)
 
 
+![image](https://user-images.githubusercontent.com/75198926/166117152-c3a68da1-4fa6-455d-90f8-9640019521a4.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166117435-c0d3b0c4-1008-453e-b136-dc5873d247da.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166117470-6a9b3e2b-9128-4c00-9f79-6bc56ce6bfe4.png)
+
+
+![image](https://user-images.githubusercontent.com/75198926/166117764-dc34e927-5b8f-4f00-88d4-a404734d6f15.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166117782-05dd4962-e4b4-4b18-a555-aacc1469574d.png)
+
+
+
+![image](https://user-images.githubusercontent.com/75198926/166118034-4f399de4-97c9-4684-a782-917327e1ef2a.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166118174-17047699-28c7-4e8b-a9c9-5474093a7e9b.png)
+
+
+![image](https://user-images.githubusercontent.com/75198926/166118274-52967360-a3bf-4ad2-8bc3-2e933882d9de.png)
 
 
 
