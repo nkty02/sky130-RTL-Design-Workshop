@@ -1042,6 +1042,11 @@ In general, a combinational circuit is a digital circuit whose output changes af
 
 **Asyncres.v**
 
+![image](https://user-images.githubusercontent.com/75198926/166105356-d3e1405f-38b2-4bd8-bda3-af619d4e3491.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166105369-b929526e-0696-462c-95cb-4fb9783a4150.png)
+
+
 ![image](https://user-images.githubusercontent.com/75198926/166105064-5f11e8b1-b004-4529-89a7-d1c60379eda6.png)
 
 posedge reset
@@ -1049,6 +1054,41 @@ posedge reset
 
 negedge reset
 ![image](https://user-images.githubusercontent.com/75198926/166105206-8cf3088c-e3eb-4a97-a58d-82f9f72a4ae0.png)
+
+**Async set.v**
+
+![image](https://user-images.githubusercontent.com/75198926/166105705-d082ed71-5c55-4e75-ae2e-cfd778a859f6.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166105773-690a461a-2ac3-4dfa-be15-82de64ecf1ae.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166105901-c2f960d1-895c-4d9f-ad17-66b221928e92.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166105926-aafb532c-35c1-48c1-b468-7b35f5258c8c.png)
+
+**Sync reset**
+
+
+![image](https://user-images.githubusercontent.com/75198926/166106047-0109a518-94b8-4da9-8526-042c4378ec7b.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166106133-3509fecb-424e-403a-93d9-a0e3717c4168.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166106144-67f305c0-be14-424d-a3e4-2d6e1ed0862c.png)
+
+
+**Synthesis**
+
+![image](https://user-images.githubusercontent.com/75198926/166106828-d784540e-58ed-45d5-a4da-53d5d114d331.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166106990-d2fd6694-7fd0-43b7-ba92-f895b3b4d375.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166107012-b389ea9c-d0c7-4fd1-ac6e-27b2fbf1a8e4.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166107024-4707f2e8-f53d-402a-ab62-1eaf392babe8.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166107057-0e217067-7756-4ed7-9c64-9544243bc933.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166107091-a62cb336-f567-4e44-a311-8426b4ba1831.png)
+
 
 
 
