@@ -943,11 +943,58 @@ The following library file opens:
 ```
 :sp ../my_lib/verilog_model/sky130_fd_sc_hd__a2111o.behavioral.v
 ```
-We can also see the leakage power, timing information, input capacitance, delay associated with each pins.
+We can also see the leakage power, timing information, input capacitance, delay associated with each pins. 
 
-- ![image](https://user-images.githubusercontent.com/75198926/166003829-525aac0a-fc41-479e-8c53-f237d40f31e5.png)
+*The following figure compares the power, area and delay between 3 types of and2 cells. Here we considered and2_0, and2_2 and and2_4 cells. As we can in the below figure that as we move from and2_0 cell to ans2_4 cell the transistor width increases, power increases, delay decreases and area increases.*
 
--  
+![image](https://user-images.githubusercontent.com/75198926/166003829-525aac0a-fc41-479e-8c53-f237d40f31e5.png)
+
+ 
+## Hierarchical vs Flat synthesis
+
+Here we use the following command to observe difference between hierarchical synthesis and flat synthesis. 
+```
+gvim multiple_modules.v
+```
+
+Then a files appears on the screen that contains three modules :
+- sub_module1 : This is a 2-input **and** gate
+- sub_module2 : This is a 2-input **or** gate
+- multiple_modules : This is a three input gate that uses top two modules to perform the logic y = a&b + c
+
+![image](https://user-images.githubusercontent.com/75198926/166090070-e1352ead-a9bf-4d23-a98b-203f9688428d.png)
+
+Now we are going to synthesize the multiple_modules.v RTL design to see how the netlist will look like. So we again invoke the Yosys for synthesis. 
+![image](https://user-images.githubusercontent.com/75198926/166090966-943b37dd-805f-43ee-9b34-cdfc551737a2.png)
+
+Then we read the liberty file as follows:
+![image](https://user-images.githubusercontent.com/75198926/166091045-3916c0f4-7b6a-4e72-aae3-7c35521403b2.png)
+
+Now we will read the verilog RTL design file using the following command :
+![image](https://user-images.githubusercontent.com/75198926/166091101-213a3b79-1e32-48a4-bbd2-587ad40cdfe5.png)
+
+Now we will synthesize the RTL design to netlist using the following command :
+```
+synth -top multiple_modules
+```
+![image](https://user-images.githubusercontent.com/75198926/166091207-d0051edf-a048-4b99-a4c5-60a3014b7c38.png)
+![image](https://user-images.githubusercontent.com/75198926/166091233-947e5d50-b517-4178-8202-03fe3a281b11.png)
+
+We use the following command to extract the netlist using the standard cells present in the library mentioned in the command :
+```
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+![image](https://user-images.githubusercontent.com/75198926/166091447-8192b6e2-8569-4f23-bc2d-5dab18de1a08.png)
+
+We use ``` show ``` command to view the logic part of the synthesized netlist.
+![image](https://user-images.githubusercontent.com/75198926/166091541-2fb08937-638d-48fc-ac4e-1375f0973d28.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166091569-2df0e75a-b1bb-4e64-b8b2-7ebf4dfc6ed9.png)
+
+This is know as the hierarchical design where the hierarchies are preserved. 
+
+
 
 # Author
 # Acknowledgements
