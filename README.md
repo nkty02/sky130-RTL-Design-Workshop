@@ -1033,7 +1033,22 @@ This is know as the hierarchical design where the hierarchies are preserved.
 ![image](https://user-images.githubusercontent.com/75198926/166095924-5462a17e-9274-4b58-8c17-400adf445c3b.png)
 
 
+## Various flop coding styles and optimization 
 
+In this session we will look into how to code flop and how many different types of flops available and different styles of flop coding. 
+
+**Why flops ?**
+In general, a combinational circuit is a digital circuit whose output changes after the circuit's propagation delay for the change in inputs has passed. Due to this propagation delay glitches occur while connecting different devices of different propagation delays. More the number of combinational blocks in the circuits more will be the glitches. If we add more number of combinational blocks in series then our output will be more glitchy and it keeps on changing continuously so we need a new device to store the computed output value and display only under certain conditions. These new devices are called flops that are used to store data. To initialize these flops we have 2 control pins called reset and set pins. 
+
+**Asyncres.v**
+
+![image](https://user-images.githubusercontent.com/75198926/166105064-5f11e8b1-b004-4529-89a7-d1c60379eda6.png)
+
+posedge reset
+![image](https://user-images.githubusercontent.com/75198926/166105179-a184f4d6-2fb1-48a5-8a8f-2aa7391fd3c8.png)
+
+negedge reset
+![image](https://user-images.githubusercontent.com/75198926/166105206-8cf3088c-e3eb-4a97-a58d-82f9f72a4ae0.png)
 
 
 
