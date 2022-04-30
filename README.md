@@ -964,6 +964,8 @@ Then a files appears on the screen that contains three modules :
 
 ![image](https://user-images.githubusercontent.com/75198926/166090070-e1352ead-a9bf-4d23-a98b-203f9688428d.png)
 
+**Hierarchical Synthesis**
+
 Now we are going to synthesize the multiple_modules.v RTL design to see how the netlist will look like. So we again invoke the Yosys for synthesis. 
 ![image](https://user-images.githubusercontent.com/75198926/166090966-943b37dd-805f-43ee-9b34-cdfc551737a2.png)
 
@@ -993,6 +995,45 @@ We use ``` show ``` command to view the logic part of the synthesized netlist.
 ![image](https://user-images.githubusercontent.com/75198926/166091569-2df0e75a-b1bb-4e64-b8b2-7ebf4dfc6ed9.png)
 
 This is know as the hierarchical design where the hierarchies are preserved. 
+
+![image](https://user-images.githubusercontent.com/75198926/166092525-8ad601f2-ed64-4669-a064-8e00cc2794fb.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166092590-78f40c1d-15a4-4215-b3e4-522c95eeb2b6.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166092638-f1281da7-b04a-41ec-91a0-9fbeec94a9ea.png)
+
+*Here sub_module1 is realized using a and2 cell present in library but or gate is not realized using standard or cell that is present in the library rather combination of nand and inverters are used to realize or gate. This is because for realizing or gate directly in cmos technology we need to use nor gate followed by inverter, but here the problem is we have stacked pmos in nor gate implementation in cmos technology which is not desired as pmos has lower mobility and high logical effort compared to nand gate and to have low delay we need to increase the width of the transistors and area increases as well as power consumption also increases.* 
+
+**Flat Synthesis**
+
+![image](https://user-images.githubusercontent.com/75198926/166093265-bd64c62c-b24a-4203-bd3c-f93434919d1c.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166093358-81e3de70-22b6-452a-9316-b9dd45a33caa.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166093394-dae92b67-e444-45f5-b64c-bfcee7ceb0f8.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166093423-3ec1cabb-1975-4d54-8ed3-f06ccb62580a.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166093737-506f0a08-cacd-49c1-8674-5ca34747e5c9.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166094368-96268fad-dbb7-4157-8c04-26170df50a40.png)
+
+
+
+**Submodule level synthesis**
+
+![image](https://user-images.githubusercontent.com/75198926/166095863-7808b012-9d0e-4018-b4d3-f2558af53c16.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166095844-345540ac-c0db-44ae-b8f5-51bdcefb1a9d.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166095789-39bc23a3-683f-403a-93df-10a1a306518c.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166095832-a0b30255-6112-4259-bfe0-c27ce778a783.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166095924-5462a17e-9274-4b58-8c17-400adf445c3b.png)
+
+
+
 
 
 
