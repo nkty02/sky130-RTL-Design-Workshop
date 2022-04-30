@@ -1191,6 +1191,13 @@ negedge reset
 ![image](https://user-images.githubusercontent.com/75198926/166119407-ffdd2ec3-9e35-4b58-b233-e82ab49b36ee.png)
 
 
+**Seq Synthesis**
+
+![image](https://user-images.githubusercontent.com/75198926/166119765-b7d82396-1f20-44e6-ad98-b461f0e687c1.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166119830-a4521a7d-dd05-4058-9120-1ec3792c5e8a.png)
+
+
 
 
 
