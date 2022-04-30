@@ -1103,6 +1103,7 @@ negedge reset
 
 ![image](https://user-images.githubusercontent.com/75198926/166107717-366a7b64-433a-4cd9-b56e-ba49b09e90eb.png)
 
+![image](https://user-images.githubusercontent.com/75198926/166107769-db3f1832-d799-4a6e-85a0-8ae25bda2b6b.png)
 
 
 # Author
