@@ -1237,6 +1237,54 @@ negedge reset
 ![image](https://user-images.githubusercontent.com/75198926/166141285-600fc9f4-4b7f-4115-b257-f3f133b58526.png)
 
 
+**Lab on IF**
+
+![image](https://user-images.githubusercontent.com/75198926/166143459-1631526b-96f5-4838-afdd-44f6d90c375a.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166143613-c71f909f-17bb-415a-946a-57dfe14198df.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166143725-f01e2eb1-5fab-4d6b-abdf-91592e5ccc1a.png)
+
+
+**IF2**
+
+![image](https://user-images.githubusercontent.com/75198926/166143829-bf8a2ab3-38d5-4404-90a9-3b3cc557ba3c.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166144458-7b1a1864-e0e5-45d9-b56d-ca10a8fbbd6a.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166144553-64121868-1f62-414f-9dc8-ed980fe35094.png)
+
+
+**incomp_case**
+
+![image](https://user-images.githubusercontent.com/75198926/166145023-507dc592-e4a7-4af0-9d2f-9d2292ced8a1.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166145065-70771ada-8508-4b86-9396-e62c9615258a.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166145118-908fde31-f514-4f44-b82e-f01a910cb1a2.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166146468-ec98ded8-b848-4276-84f9-6410a5391d76.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166147249-7f99c7cf-f25d-4fbc-85c5-7fe539efb1b2.png)
+
+
+**Comp_case**
+
+![image](https://user-images.githubusercontent.com/75198926/166147656-05eae314-dd7d-4a97-aff7-294750951b57.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166147833-2934be10-5670-4d4c-bb54-c7bff3aa8356.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166147939-35e214c7-c58c-4cac-8abc-e0e586c1f729.png)
+
+
+**Partial_case**
+
+![image](https://user-images.githubusercontent.com/75198926/166148133-c4c6876e-bb9f-464c-bfcb-688b3fc4d019.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166148418-2307f7dd-ebf3-4b9d-9d3e-5158de8a623c.png)
+
+
+
 
 
 
