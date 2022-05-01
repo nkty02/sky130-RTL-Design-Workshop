@@ -1219,7 +1219,9 @@ negedge reset
 
 ![image](https://user-images.githubusercontent.com/75198926/166137050-48b11dd9-ffac-4dfd-8acc-c975423840c8.png)
 
+![image](https://user-images.githubusercontent.com/75198926/166140367-a67ce795-ab0c-4950-beb6-1507740a5cbd.png)
 
+![image](https://user-images.githubusercontent.com/75198926/166140471-532556e2-93c1-4bec-8f5d-e1360ec9ceac.png)
 
 
 
