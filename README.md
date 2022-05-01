@@ -1198,6 +1198,41 @@ negedge reset
 ![image](https://user-images.githubusercontent.com/75198926/166119830-a4521a7d-dd05-4058-9120-1ec3792c5e8a.png)
 
 
+# Day 4
+
+## Synthesis simulation mismatch lab
+
+![image](https://user-images.githubusercontent.com/75198926/166135110-ec0239b6-61dd-4ff7-bf64-522fa2c0c948.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166135259-96577778-c360-434b-aded-078015b7e280.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166135293-13bedfa1-20b6-4abd-9648-41ae87734b91.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166135446-6ff90887-4127-49ad-bc22-f3ba58aae614.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166136073-178b0adf-64f9-4ce7-9378-aaff81491e71.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
