@@ -1202,6 +1202,8 @@ negedge reset
 
 ## Synthesis simulation mismatch lab
 
+**ternary**
+
 ![image](https://user-images.githubusercontent.com/75198926/166135110-ec0239b6-61dd-4ff7-bf64-522fa2c0c948.png)
 
 ![image](https://user-images.githubusercontent.com/75198926/166135259-96577778-c360-434b-aded-078015b7e280.png)
@@ -1213,8 +1215,9 @@ negedge reset
 ![image](https://user-images.githubusercontent.com/75198926/166136073-178b0adf-64f9-4ce7-9378-aaff81491e71.png)
 
 
+**Bad mux**
 
-
+![image](https://user-images.githubusercontent.com/75198926/166137050-48b11dd9-ffac-4dfd-8acc-c975423840c8.png)
 
 
 
