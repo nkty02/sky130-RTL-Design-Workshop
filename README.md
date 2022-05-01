@@ -1299,6 +1299,9 @@ Latching to value 1.
 ![image](https://user-images.githubusercontent.com/75198926/166149705-b825ccd8-9442-4a6c-a66f-23d3e802530d.png)
 
 
+Synthesis
+
+![image](https://user-images.githubusercontent.com/75198926/166150132-034528bd-67cf-4b33-aa08-6071c18779ad.png)
 
 
 
