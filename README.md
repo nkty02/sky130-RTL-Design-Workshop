@@ -1284,12 +1284,19 @@ negedge reset
 ![image](https://user-images.githubusercontent.com/75198926/166148418-2307f7dd-ebf3-4b9d-9d3e-5158de8a623c.png)
 
 
+**Bad case**
 
+![image](https://user-images.githubusercontent.com/75198926/166148681-96ef43e8-3f41-43e2-bc73-50856e50f3ef.png)
 
+![image](https://user-images.githubusercontent.com/75198926/166149126-d11c3674-d239-41ef-87f7-be648685dc6c.png)
 
+![image](https://user-images.githubusercontent.com/75198926/166149228-90871695-a449-4899-b331-ec03a8b4e6d0.png)
 
+![image](https://user-images.githubusercontent.com/75198926/166149239-35eee8e8-5345-491f-811a-90b62b07b0cf.png)
 
+Latching to value 1.
 
+![image](https://user-images.githubusercontent.com/75198926/166149705-b825ccd8-9442-4a6c-a66f-23d3e802530d.png)
 
 
 
