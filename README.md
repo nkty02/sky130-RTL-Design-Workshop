@@ -1226,7 +1226,15 @@ negedge reset
 
 
 
+**Seq1**
 
+![image](https://user-images.githubusercontent.com/75198926/166140715-025fe5f9-8d7f-476a-a132-1d58d5a1c8d5.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166140979-059ead63-823f-4363-8d69-c52b5e49159f.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166141109-1e2c887f-513b-422d-ad31-51d73ffd3f1d.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166141285-600fc9f4-4b7f-4115-b257-f3f133b58526.png)
 
 
 
