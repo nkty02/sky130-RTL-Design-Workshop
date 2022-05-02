@@ -1560,3 +1560,6 @@ Khyathi N, B.Tech in Electronic and Electrical Communication Engineering at Indi
 
 [Cloud based 5 day workshop on RTL design using verilog with sky130 Technology](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/?awt_a=5L_6&awt_l=Hnigh&awt_m=3j4Twy0KzRZ0Q_6)
 
+# Word of Thanks
+
+I'd like to express my gratitude to the VLSI System Design and Chipspirit teams for their collaborative session which are well-structured. Kunal Gosh sir and Shon Taware sir deserve special thanks for their assistance with the flow and helping me out with technical concerns. I'm looking forward to future events with both the teams. I wish VSD team and Chipspirit team all the very best. 
