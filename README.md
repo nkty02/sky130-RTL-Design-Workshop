@@ -856,44 +856,127 @@ The logical part of the synthesized netlist is as follows :
 
 
 
-
+**Example : 2**
 **opt_check2**
 
-![image](https://user-images.githubusercontent.com/75198926/166110592-f41b5608-1fd7-4016-9444-407df6eceb03.png)
+The following figure depicts the RTL design of our first combinational circuit : 
+ 
+![image](https://user-images.githubusercontent.com/75198926/166110009-06cd2f44-e853-4b87-8e09-0d5fd676b155.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166110608-0aa38ff6-a43b-48b3-90a7-fffdc4248bf8.png)
+
+The following is the statistics after performing synth -top opt_check2 :
 
 ![image](https://user-images.githubusercontent.com/75198926/166110636-4756c7cf-4a1d-453b-97b3-0b64c4d0cc7b.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166110657-9f94f6b4-3929-405c-8f7e-24b300da067b.png)
+
+The logical part of the synthesized netlist is as follows :
+
+![image](https://user-images.githubusercontent.com/75198926/166110592-f41b5608-1fd7-4016-9444-407df6eceb03.png)
 
 
+**Explanation :**
+
+![image](https://user-images.githubusercontent.com/75198926/166232337-6730fa24-441a-4911-b547-c9804d0c76d1.png)
+
+
+**Example : 3**
 **opt_check3**
 
-![image](https://user-images.githubusercontent.com/75198926/166110849-9ddaf188-6643-4552-aa50-444ef6954ccf.png)
+The following figure depicts the RTL design of our first combinational circuit : 
 
-![image](https://user-images.githubusercontent.com/75198926/166110888-7c8ecda4-dc81-4d81-ad7e-74e7b9b929fd.png)
+![image](https://user-images.githubusercontent.com/75198926/166233123-146797af-b8c1-4ffb-aa45-752c21242602.png)
+
+
+The following is the statistics after performing synth -top opt_check3 :
 
 ![image](https://user-images.githubusercontent.com/75198926/166110902-52fa218f-d6dd-48d7-9395-2912a56020d4.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166110937-5a074d0d-8298-49c1-92d8-b172226f1830.png)
+
+The logical part of the synthesized netlist is as follows :
+
+![image](https://user-images.githubusercontent.com/75198926/166110849-9ddaf188-6643-4552-aa50-444ef6954ccf.png)
 
 
+
+**Explanation :**
+
+![image](https://user-images.githubusercontent.com/75198926/166237055-ad873875-9263-4075-82a8-903017314cad.png)
+
+
+
+**Example : 4**
 **opt_check4**
 
-![image](https://user-images.githubusercontent.com/75198926/166112247-f089909f-af9a-4aa0-8158-e02a20b44a67.png)
+The following figure depicts the RTL design of our first combinational circuit : 
 
 ![image](https://user-images.githubusercontent.com/75198926/166112918-66ddd0ac-9ac0-4645-a38f-3152a031d2a8.png)
 
 
-**multiple_modules_opt**
+The logical part of the synthesized netlist is as follows :
+
+![image](https://user-images.githubusercontent.com/75198926/166112247-f089909f-af9a-4aa0-8158-e02a20b44a67.png)
+
+
+**Explanation :**
+
+![image](https://user-images.githubusercontent.com/75198926/166237249-b689707d-7540-4908-a9f5-ef371f92de7c.png)
+
+
+
+
+
+**Example : 5**
+**multiple_module_opt**
+
+The following figure depicts the RTL design of our first combinational circuit : 
 
 ![image](https://user-images.githubusercontent.com/75198926/166113125-aeabe018-5d48-43aa-93aa-d778bf3caf36.png)
+
+
+The logical part of the synthesized netlist is as follows :
+
+![image](https://user-images.githubusercontent.com/75198926/166237637-4d6599f7-e592-4334-aede-e7088608d2d1.png)
+
+
+
+**Explanation :**
+
+![image](https://user-images.githubusercontent.com/75198926/166239471-f46315e1-3c9e-4039-aebf-7486a91ff7b6.png)
+
+
+
+**Example : 6**
+**multiple_module_opt2**
+
+The following figure depicts the RTL design of our first combinational circuit : 
 
 ![image](https://user-images.githubusercontent.com/75198926/166113169-b1ad1563-8389-4d2d-8a1b-6dd00367b7ed.png)
 
 
-## Sequential Logic Optimization**
+The logical part of the synthesized netlist is as follows :
+
+![image](https://user-images.githubusercontent.com/75198926/166237721-8780b532-1706-422f-a963-22cb0dddec71.png)
+
+
+
+**Explanation :**
+
+![image](https://user-images.githubusercontent.com/75198926/166240252-fa673ecf-2864-4a69-a436-8d594154d2d8.png)
+
+
+
+
+## Labs on Sequential Logic Optimization
+
+Through this lab session we are going to see some examples on sequential logic optimisation. In yosys we require a unique command to perform sequential optimisation, the command is as follows :
+
+```
+yosys> dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd_tt__025C_1v80.lib
+```
+
+
+.................
+
 
 ![image](https://user-images.githubusercontent.com/75198926/166116806-7dcf8e9b-359b-4a87-a8ff-aa58d164269d.png)
 
