@@ -50,7 +50,41 @@ This repository is created to document all the theory and labs done as a part of
     - [Sequential logic optimisations part-3]()
   - [Sequential optimisations for unused outputs]()
     - [Sequential optimisations for unused outputs part-1]() 
-    - [Sequential optimisations for unused outputs part-2]()      
+    - [Sequential optimisations for unused outputs part-2]()
+- [Day 4: GLS, blocking vs non-blocking and synthesis-simulation mismatch]()
+  - [GLS, blocking vs non-blocking and synthesis-simulation mismatch]()
+    - [GLS concepts and flow using iverilog]() 
+    - [Synthesis-simulation mismatch]() 
+    - [Blocking and non-blocking statements in verilog]()
+    - [caveats with blocking statements]()
+  - [Labs on GLS and synthesis-simulation mismatch]()
+    - [Labs on GLS and synthesis-simulation mismatch part-1]()
+    - [Labs on GLS and synthesis-simulation mismatch part-2]()
+  - [Labs on synthesis-simulation mismatch for blocking statements]()
+    - [Labs on synthesis-simulation mismatch for blocking statements part-1]()
+    - [Labs on synthesis-simulation mismatch for blocking statements part-2]() 
+- [Day 5: If, case, for loop and for generate]()
+  - [If case constructs]()
+    - [If case constructs part-1]() 
+    - [If case constructs part-2]() 
+    - [If case constructs part-3]()
+  - [Labs on Incomplete If Case ]()
+    - [Labs on Incomplete If Case part-1]()
+    - [Labs on Incomplete If Case part-2]()
+  - [Labs on Incomplete overlapping case]()
+    - [Labs on Incomplete overlapping case part-1]()
+    - [Labs on Incomplete overlapping case part-2]() 
+    - [Labs on Incomplete overlapping case part-3]()'
+    - [Labs on Incomplete overlapping case part-4]()
+  - [For loop and For Generate]()
+    - [For loop and For Generate part-1]() 
+    - [For loop and For Generate part-2]() 
+    - [For loop and For Generate part-3]()
+  - [Labs on For loop and For Generate]()
+    - [Labs on For loop and For Generate part-1]()
+    - [Labs on For loop and For Generate part-2]() 
+    - [Labs on For loop and For Generate part-3]()'
+    - [Labs on For loop and For Generate part-4]()
 - [Author]()
 - [Acknowledgements]()
 
@@ -352,377 +386,6 @@ synth -top good_mux
 ```
 yosys> synth -top good_mux
 
-3. Executing SYNTH pass.
-
-3.1. Executing HIERARCHY pass (managing design hierarchy).
-
-3.1.1. Analyzing design hierarchy..
-Top module:  \good_mux
-
-3.1.2. Analyzing design hierarchy..
-Top module:  \good_mux
-Removed 0 unused modules.
-
-3.2. Executing PROC pass (convert processes to netlists).
-
-3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Cleaned up 0 empty switches.
-
-3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$good_mux.v:3$1 in module good_mux.
-Removed a total of 0 dead cases.
-
-3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
-Removed 1 redundant assignment.
-Promoted 0 assignments to connections.
-
-3.2.4. Executing PROC_INIT pass (extract init attributes).
-
-3.2.5. Executing PROC_ARST pass (detect async resets in processes).
-
-3.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\good_mux.$proc$good_mux.v:3$1'.
-     1/1: $0\y[0:0]
-
-3.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `\good_mux.\y' from process `\good_mux.$proc$good_mux.v:3$1'.
-
-3.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
-
-3.2.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
-
-3.2.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 1 empty switch in `\good_mux.$proc$good_mux.v:3$1'.
-Removing empty process `good_mux.$proc$good_mux.v:3$1'.
-Cleaned up 1 empty switch.
-
-3.3. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.4. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-Removed 0 unused cells and 3 unused wires.
-<suppressed ~1 debug messages>
-
-3.5. Executing CHECK pass (checking for obvious problems).
-Checking module good_mux...
-Found and reported 0 problems.
-
-3.6. Executing OPT pass (performing simple optimizations).
-
-3.6.1. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.6.2. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
-Running muxtree optimizer on module \good_mux..
-  Creating internal representation of mux trees.
-  Evaluating internal representation of mux trees.
-  Analyzing evaluation results.
-Removed 0 multiplexer ports.
-<suppressed ~1 debug messages>
-
-3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
-  Optimizing cells in module \good_mux.
-Performed a total of 0 changes.
-
-3.6.5. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.6.6. Executing OPT_DFF pass (perform DFF optimizations).
-
-3.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.6.8. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.6.9. Finished OPT passes. (There is nothing left to do.)
-
-3.7. Executing FSM pass (extract and optimize FSM).
-
-3.7.1. Executing FSM_DETECT pass (finding FSMs in design).
-
-3.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
-
-3.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
-
-3.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
-
-3.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
-
-3.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
-
-3.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
-
-3.8. Executing OPT pass (performing simple optimizations).
-
-3.8.1. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.8.2. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
-Running muxtree optimizer on module \good_mux..
-  Creating internal representation of mux trees.
-  Evaluating internal representation of mux trees.
-  Analyzing evaluation results.
-Removed 0 multiplexer ports.
-<suppressed ~1 debug messages>
-
-3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
-  Optimizing cells in module \good_mux.
-Performed a total of 0 changes.
-
-3.8.5. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.8.6. Executing OPT_DFF pass (perform DFF optimizations).
-
-3.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.8.8. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.8.9. Finished OPT passes. (There is nothing left to do.)
-
-3.9. Executing WREDUCE pass (reducing word size of cells).
-
-3.10. Executing PEEPOPT pass (run peephole optimizers).
-
-3.11. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.12. Executing ALUMACC pass (create $alu and $macc cells).
-Extracting $alu and $macc cells in module good_mux:
-  created 0 $alu and 0 $macc cells.
-
-3.13. Executing SHARE pass (SAT-based resource sharing).
-
-3.14. Executing OPT pass (performing simple optimizations).
-
-3.14.1. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.14.2. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
-Running muxtree optimizer on module \good_mux..
-  Creating internal representation of mux trees.
-  Evaluating internal representation of mux trees.
-  Analyzing evaluation results.
-Removed 0 multiplexer ports.
-<suppressed ~1 debug messages>
-
-3.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
-  Optimizing cells in module \good_mux.
-Performed a total of 0 changes.
-
-3.14.5. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.14.6. Executing OPT_DFF pass (perform DFF optimizations).
-
-3.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.14.8. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.14.9. Finished OPT passes. (There is nothing left to do.)
-
-3.15. Executing MEMORY pass.
-
-3.15.1. Executing OPT_MEM pass (optimize memories).
-Performed a total of 0 transformations.
-
-3.15.2. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
-
-3.15.3. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.15.4. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
-
-3.15.5. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
-
-3.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.15.7. Executing MEMORY_COLLECT pass (generating $mem cells).
-
-3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.17. Executing OPT pass (performing simple optimizations).
-
-3.17.1. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.17.2. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.17.3. Executing OPT_DFF pass (perform DFF optimizations).
-
-3.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.17.5. Finished fast OPT passes.
-
-3.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
-
-3.19. Executing OPT pass (performing simple optimizations).
-
-3.19.1. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.19.2. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
-Running muxtree optimizer on module \good_mux..
-  Creating internal representation of mux trees.
-  Evaluating internal representation of mux trees.
-  Analyzing evaluation results.
-Removed 0 multiplexer ports.
-<suppressed ~1 debug messages>
-
-3.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
-  Optimizing cells in module \good_mux.
-Performed a total of 0 changes.
-
-3.19.5. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.19.6. Executing OPT_SHARE pass.
-
-3.19.7. Executing OPT_DFF pass (perform DFF optimizations).
-
-3.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.19.9. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.19.10. Finished OPT passes. (There is nothing left to do.)
-
-3.20. Executing TECHMAP pass (map to technology primitives).
-
-3.20.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
-Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
-Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
-Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
-Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
-Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
-Generating RTLIL representation for module `\_90_simplemap_various'.
-Generating RTLIL representation for module `\_90_simplemap_registers'.
-Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
-Generating RTLIL representation for module `\_90_shift_shiftx'.
-Generating RTLIL representation for module `\_90_fa'.
-Generating RTLIL representation for module `\_90_lcu'.
-Generating RTLIL representation for module `\_90_alu'.
-Generating RTLIL representation for module `\_90_macc'.
-Generating RTLIL representation for module `\_90_alumacc'.
-Generating RTLIL representation for module `\$__div_mod_u'.
-Generating RTLIL representation for module `\$__div_mod_trunc'.
-Generating RTLIL representation for module `\_90_div'.
-Generating RTLIL representation for module `\_90_mod'.
-Generating RTLIL representation for module `\$__div_mod_floor'.
-Generating RTLIL representation for module `\_90_divfloor'.
-Generating RTLIL representation for module `\_90_modfloor'.
-Generating RTLIL representation for module `\_90_pow'.
-Generating RTLIL representation for module `\_90_pmux'.
-Generating RTLIL representation for module `\_90_lut'.
-Successfully finished Verilog frontend.
-
-3.20.2. Continuing TECHMAP pass.
-Using extmapper simplemap for cells of type $mux.
-No more expansions possible.
-<suppressed ~68 debug messages>
-
-3.21. Executing OPT pass (performing simple optimizations).
-
-3.21.1. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.21.2. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.21.3. Executing OPT_DFF pass (perform DFF optimizations).
-
-3.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-
-3.21.5. Finished fast OPT passes.
-
-3.22. Executing ABC pass (technology mapping using ABC).
-
-3.22.1. Extracting gate netlist of module `\good_mux' to `<abc-temp-dir>/input.blif'..
-Extracted 1 gates and 4 wires to a netlist network with 3 inputs and 1 outputs.
-
-3.22.1.1. Executing ABC.
-Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
-ABC: ABC command line: "source <abc-temp-dir>/abc.script".
-ABC: 
-ABC: + read_blif <abc-temp-dir>/input.blif 
-ABC: + read_library <abc-temp-dir>/stdcells.genlib 
-ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
-ABC: + strash 
-ABC: + dretime 
-ABC: + map 
-ABC: + write_blif <abc-temp-dir>/output.blif 
-
-3.22.1.2. Re-integrating ABC results.
-ABC RESULTS:               MUX cells:        1
-ABC RESULTS:        internal signals:        0
-ABC RESULTS:           input signals:        3
-ABC RESULTS:          output signals:        1
-Removing temp directory.
-
-3.23. Executing OPT pass (performing simple optimizations).
-
-3.23.1. Executing OPT_EXPR pass (perform const folding).
-Optimizing module good_mux.
-
-3.23.2. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\good_mux'.
-Removed a total of 0 cells.
-
-3.23.3. Executing OPT_DFF pass (perform DFF optimizations).
-
-3.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \good_mux..
-Removed 0 unused cells and 4 unused wires.
-<suppressed ~1 debug messages>
-
-3.23.5. Finished fast OPT passes.
-
-3.24. Executing HIERARCHY pass (managing design hierarchy).
-
-3.24.1. Analyzing design hierarchy..
-Top module:  \good_mux
-
-3.24.2. Analyzing design hierarchy..
-Top module:  \good_mux
-Removed 0 unused modules.
-
 3.25. Printing statistics.
 
 === good_mux ===
@@ -746,133 +409,7 @@ Found and reported 0 problems.
 - Now we need to write the verilog file i.e., we need to generate the netlist using the following command :
 
 ```
-abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-```
-
-```
 yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-
-4. Executing ABC pass (technology mapping using ABC).
-
-4.1. Extracting gate netlist of module `\good_mux' to `<abc-temp-dir>/input.blif'..
-Extracted 1 gates and 4 wires to a netlist network with 3 inputs and 1 outputs.
-
-4.1.1. Executing ABC.
-Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
-ABC: ABC command line: "source <abc-temp-dir>/abc.script".
-ABC: 
-ABC: + read_blif <abc-temp-dir>/input.blif 
-ABC: + read_lib -w /home/reachkty/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
-ABC: Parsing finished successfully.  Parsing time =     0.18 sec
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_0".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
-ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
-ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
-ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/reachkty/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use).  Time =     0.25 sec
-ABC: Memory =   16.00 MB. Time =     0.25 sec
-ABC: Warning: Detected 9 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
-ABC: + strash 
-ABC: + ifraig 
-ABC: + scorr 
-ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
-ABC: + dc2 
-ABC: + dretime 
-ABC: + strash 
-ABC: + &get -n 
-ABC: + &dch -f 
-ABC: + &nf 
-ABC: + &put 
-ABC: + write_blif <abc-temp-dir>/output.blif 
 
 4.1.2. Re-integrating ABC results.
 ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:        1
@@ -929,7 +466,11 @@ The following library file opens:
 
 ![image](https://user-images.githubusercontent.com/75198926/165990583-4e3d5c44-795e-4988-b6f5-ab53bf85f25e.png)
 
-- The first line tells the name of the library it's **sky130_fd_sc_hd__tt_025C_1v80.lib**. It is a 130nm technology library(sky130 idicates this) and *tt* indicates that this library is typical library and the *025C* indicates that temperature is 25 degrees celsius for this library, and *1v80* indicates that the rail voltage for this library is 1.8Volts. These parameters are called PVT (Process Voltage Temperature) and these parameters determine how my silicon is going to work faster or typical or slower. We also have studied how these PVT variations occur during fabrication and why is it important to consider PVT variations while designing our circuit. 
+- The first line tells the name of the library it's **sky130_fd_sc_hd__tt_025C_1v80.lib**. It is a 130nm technology library(sky130 idicates this) and *tt* indicates that this library is typical library and the *025C* indicates that temperature is 25 degrees celsius for this library, and *1v80* indicates that the rail voltage for this library is 1.8Volts. These parameters are called PVT (Process Voltage Temperature) and these parameters determine how my silicon is going to work faster or typical or slower. We also have studied how these PVT variations occur during fabrication and why is it important to consider PVT variations while designing our circuit. The following is the pictorial representation of the understanding of PVT paraeters.
+
+![image](https://user-images.githubusercontent.com/75198926/166183397-c6c11008-92e1-48fd-851b-789dc9524d31.png)
+
+
 - This also tells that CMOS technology is used in this library. And the delay model is the lookup table model. Units of time, power, current, voltage, capacitance, resistance are also mentioned in the library. Operation conditions is as follows :
 
 ![image](https://user-images.githubusercontent.com/75198926/165993613-8731443c-a097-48ad-9484-89018ea908cf.png)
@@ -947,54 +488,63 @@ We can also see the leakage power, timing information, input capacitance, delay 
 
 *The following figure compares the power, area and delay between 3 types of and2 cells. Here we considered and2_0, and2_2 and and2_4 cells. As we can in the below figure that as we move from and2_0 cell to ans2_4 cell the transistor width increases, power increases, delay decreases and area increases.*
 
-![image](https://user-images.githubusercontent.com/75198926/166003829-525aac0a-fc41-479e-8c53-f237d40f31e5.png)
+![image](https://user-images.githubusercontent.com/75198926/166183689-fbb69040-97ea-4a71-9cd9-c2932eb5cabb.png)
 
  
 ## Hierarchical vs Flat synthesis
 
-Here we use the following command to observe difference between hierarchical synthesis and flat synthesis. 
+In this module we will see how a hierarchical synthesis differs from a flat synthesis and also how to flatten the hierarchical design to get flat synthesis. Here we use the following command to open a file which is used to observe difference between hierarchical synthesis and flat synthesis. 
 ```
 gvim multiple_modules.v
 ```
 
-Then a files appears on the screen that contains three modules :
+![image](https://user-images.githubusercontent.com/75198926/166090070-e1352ead-a9bf-4d23-a98b-203f9688428d.png)
+
+Then a files appears on the screen as shown above that contains three modules :
 - sub_module1 : This is a 2-input **and** gate
 - sub_module2 : This is a 2-input **or** gate
 - multiple_modules : This is a three input gate that uses top two modules to perform the logic y = a&b + c
 
-![image](https://user-images.githubusercontent.com/75198926/166090070-e1352ead-a9bf-4d23-a98b-203f9688428d.png)
+![image](https://user-images.githubusercontent.com/75198926/166184786-3609f62e-938f-481c-a44f-bb26f33fd223.png)
+
 
 **Hierarchical Synthesis**
 
-Now we are going to synthesize the multiple_modules.v RTL design to see how the netlist will look like. So we again invoke the Yosys for synthesis. 
+Now we are going to synthesize the multiple_modules.v RTL design to see how the netlist will look like. 
+
+1. **So we again invoke the Yosys for synthesis**
+
 ![image](https://user-images.githubusercontent.com/75198926/166090966-943b37dd-805f-43ee-9b34-cdfc551737a2.png)
 
-Then we read the liberty file as follows:
+2. **Then we read the liberty file as follows :**
+
 ![image](https://user-images.githubusercontent.com/75198926/166091045-3916c0f4-7b6a-4e72-aae3-7c35521403b2.png)
 
-Now we will read the verilog RTL design file using the following command :
+3. **Now we will read the verilog RTL design file using the following command :**
+
 ![image](https://user-images.githubusercontent.com/75198926/166091101-213a3b79-1e32-48a4-bbd2-587ad40cdfe5.png)
 
-Now we will synthesize the RTL design to netlist using the following command :
+4. **Now we will synthesize the RTL design to netlist using the following command :**
 ```
 synth -top multiple_modules
 ```
-![image](https://user-images.githubusercontent.com/75198926/166091207-d0051edf-a048-4b99-a4c5-60a3014b7c38.png)
-![image](https://user-images.githubusercontent.com/75198926/166091233-947e5d50-b517-4178-8202-03fe3a281b11.png)
 
-We use the following command to extract the netlist using the standard cells present in the library mentioned in the command :
+![image](https://user-images.githubusercontent.com/75198926/166185887-7e85da3c-c94b-4995-90f0-aeef4d2197b2.png)
+
+5. **We use the following command to extract the netlist using the standard cells present in the library mentioned in the command :**
 ```
 abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
 ![image](https://user-images.githubusercontent.com/75198926/166091447-8192b6e2-8569-4f23-bc2d-5dab18de1a08.png)
 
-We use ``` show ``` command to view the logic part of the synthesized netlist.
+6. **We use ``` show ``` command to view the logic part of the synthesized netlist.**
+
 ![image](https://user-images.githubusercontent.com/75198926/166091541-2fb08937-638d-48fc-ac4e-1375f0973d28.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166091569-2df0e75a-b1bb-4e64-b8b2-7ebf4dfc6ed9.png)
+![image](https://user-images.githubusercontent.com/75198926/166186186-47b499d0-5a33-43ef-9d1c-f8f5957ebd4c.png)
 
-This is know as the hierarchical design where the hierarchies are preserved. 
+Here we can see that the hierarchy is maintained. Because even after synthesis of multiple_module we got sub_module1 and sub_module2 in the logic part of the synthesized netlist inplace of completely synthesized sub modules. This is know as hierarchical synthesis where the sub modules information is preserved.
 
 ![image](https://user-images.githubusercontent.com/75198926/166092525-8ad601f2-ed64-4669-a064-8e00cc2794fb.png)
 
@@ -1002,7 +552,7 @@ This is know as the hierarchical design where the hierarchies are preserved.
 
 ![image](https://user-images.githubusercontent.com/75198926/166092638-f1281da7-b04a-41ec-91a0-9fbeec94a9ea.png)
 
-*Here sub_module1 is realized using a and2 cell present in library but or gate is not realized using standard or cell that is present in the library rather combination of nand and inverters are used to realize or gate. This is because for realizing or gate directly in cmos technology we need to use nor gate followed by inverter, but here the problem is we have stacked pmos in nor gate implementation in cmos technology which is not desired as pmos has lower mobility and high logical effort compared to nand gate and to have low delay we need to increase the width of the transistors and area increases as well as power consumption also increases.* 
+*Here sub_module1 is realized using a **and2** cell present in library but **or** gate is not realized using standard **or** cell that is present in the library rather combination of nand and inverters are used to realize or gate. This is because for realizing or gate directly in cmos technology we need to use nor gate followed by inverter, but here the problem is we have stacked pmos in nor gate implementation in cmos technology which is not desired as pmos has lower mobility and high logical effort compared to nand gate and to have low delay we need to increase the width of the transistors and area increases as well as power consumption also increases.* 
 
 **Flat Synthesis**
 
