@@ -726,7 +726,7 @@ The generated netlist file is as follows : Here simply y is assigned as y = {a, 
 
 
 
-**Multiply with 8**
+**Multiply with 9**
 
 In the example below, we can see that multiplication of a number(a) by 9 does not require any additional hardware; all that is required is connecting the bits from a to y twice i.e., y = {a, a} as demonstrated by Yosys.
 
@@ -759,11 +759,45 @@ The logical part of the generated netlist is as follows: *Clearly we can see tha
 
 ## Combinational logic optimisations
 
+There are three types of combinational logic optimisations. They are :
+- squeezing the logic to get the most optimized design 
+  - Area and power savings
+- Constant propagation
+  - direct optimisation
+- Boolean logic optimisation
+  - K-map 
+  - Quine McKluskey
 
 
+**Constant Propagation : Example**
+
+Let us consider the following combinational circuit consisting of one AND gate and one NOR gate. Let us use constant propagation optimisation to optimise the design and bring down to a circuit consisting of one inverter. 
+
+![image](https://user-images.githubusercontent.com/75198926/166215271-365d45ef-e971-44e6-952b-9dead8cce782.png)
+
+- Transistor - level implementation :
+
+We can clearly see that number of transistors required after constant propagation optimisation is less than original design. This is achieved by making A as contstant and propagating the same to output. 
+
+![image](https://user-images.githubusercontent.com/75198926/166217447-e79c05ef-5629-4743-be7e-1a87fc5344c7.png)
 
 
+**Boolean Logic Optimisation : Example**
 
+Let us consider the following statement y = a?(b?c:(c?a:0)):(!c). Let us use boolean logic optimisation to optimise the design and bring down to a circuit consisting of one XNOR gate. 
+
+![image](https://user-images.githubusercontent.com/75198926/166220895-bcca5259-1579-400d-b718-7058c0f7ef04.png)
+
+
+## Sequential logic optimisations
+
+There are two types of sequential logic optimisations. They are :
+- Basic 
+  - Sequential constant propagation
+- Advanced (*Not discussed*)
+  - State optimisation
+  - Retiming 
+  - Sequential logic cloning
 
 
 
