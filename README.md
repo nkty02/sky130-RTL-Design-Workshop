@@ -799,6 +799,23 @@ There are two types of sequential logic optimisations. They are :
   - Retiming 
   - Sequential logic cloning
 
+**Sequential Constant Propagation : Example**
+
+**Example : 1**
+Let us consider the following sequential+combinational mixed circuit consisting of one Flop with asychronous rest and one NAND gate. Let us use constant propagation optimisation to optimise the design and bring down to a circuit consisting of no gates. 
+
+![image](https://user-images.githubusercontent.com/75198926/166228332-58d4a81d-228a-464c-a0a9-91fe224a7da8.png)
+
+**Here the output flop is always 0, so the output evaluates to 1 always. Now the complete circuit is no more needed.** 
+
+
+**Example : 1**
+Let us consider the following sequential+combinational mixed circuit consisting of one Flop with asychronous set and one NAND gate. Let us try to use constant propagation optimisation to optimise the design and see if the design can be optimised or not. 
+
+![image](https://user-images.githubusercontent.com/75198926/166228947-29e29682-b44a-4da6-9409-720928049ff0.png)
+
+**Here the output q changes based on set and clock. Therefore, the circuit cannot be optimised.**
+
 
 
 
