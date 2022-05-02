@@ -625,6 +625,8 @@ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ## Various flop coding styles and optimization 
 
+### Flop synthesis simulations
+
 In this session we will look into how to code flop and know many different types of flops available and different styles of flop codings. 
 
 **Why flops ?**
@@ -692,10 +694,19 @@ Here we need to note two major instances from the waveform.
 ![image](https://user-images.githubusercontent.com/75198926/166106047-0109a518-94b8-4da9-8526-042c4378ec7b.png)
 
 
+## Interesting optimizations
 
-**Synthesis**
+This lab session deals with some automatic and interesting optimisations of the circuits based on logic. 
+
+**Multiply with 2**
+
+In the example below, we can see that multiplication of a number(a) by 2 does not require any additional hardware; all that is required is connecting the bits from a to y and grounding the LSB bit of y, as demonstrated by Yosys.
+
+The following is the RTL design code for multiplying a number(a) with 2.
 
 ![image](https://user-images.githubusercontent.com/75198926/166106828-d784540e-58ed-45d5-a4da-53d5d114d331.png)
+
+![image](https://user-images.githubusercontent.com/75198926/166107423-3f943d11-8dd6-4cac-8b81-8ebb11d315f4.png)
 
 ![image](https://user-images.githubusercontent.com/75198926/166106990-d2fd6694-7fd0-43b7-ba92-f895b3b4d375.png)
 
@@ -709,7 +720,7 @@ Here we need to note two major instances from the waveform.
 
 ![image](https://user-images.githubusercontent.com/75198926/166107399-67ae61a2-75b1-4165-b4b5-442c676683ce.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166107423-3f943d11-8dd6-4cac-8b81-8ebb11d315f4.png)
+
 
 **Mult_8**
 
