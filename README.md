@@ -592,7 +592,7 @@ Now we are going to do flat synthesis of the multiple_modules.v RTL design to se
 
 
 
-**Submodule level synthesis of sub_module1**
+## Submodule level synthesis of sub_module1
 
 **Why sub module level synthesis ?**
 - When our RTL design contains multiple instantiation of the same sub module then we do submodule level synthesis for one time and replicate that result for remaining submodules. This saves a lot of time required for synthesizing main module. 
