@@ -493,6 +493,7 @@ We can also see the leakage power, timing information, input capacitance, delay 
  
 ## Hierarchical vs Flat synthesis
 
+
 In this module we will see how a hierarchical synthesis differs from a flat synthesis and also how to flatten the hierarchical design to get flat synthesis. Here we use the following command to open a file which is used to observe difference between hierarchical synthesis and flat synthesis. 
 ```
 gvim multiple_modules.v
@@ -548,7 +549,11 @@ Here we can see that the hierarchy is maintained. Because even after synthesis o
 
 ![image](https://user-images.githubusercontent.com/75198926/166092525-8ad601f2-ed64-4669-a064-8e00cc2794fb.png)
 
+7. **Here we have written the hierarchical synthesis netlist of the multiple_module RTL design to a file. Here we used the command ```-noattr``` for easy intepretation of the netlist.** 
+
 ![image](https://user-images.githubusercontent.com/75198926/166092590-78f40c1d-15a4-4215-b3e4-522c95eeb2b6.png)
+
+8. **Below is the command used to open the netlist file to read.**
 
 ![image](https://user-images.githubusercontent.com/75198926/166092638-f1281da7-b04a-41ec-91a0-9fbeec94a9ea.png)
 
@@ -556,15 +561,32 @@ Here we can see that the hierarchy is maintained. Because even after synthesis o
 
 **Flat Synthesis**
 
+Now we are going to do flat synthesis of the multiple_modules.v RTL design to see how the netlist will look like. 
+
+1. **For this we follow the same steps followed for hierarchical design but we nned to flatten the design so we use the comand ``` flatten ``` before writing the netlist to the file.**  
+
 ![image](https://user-images.githubusercontent.com/75198926/166093265-bd64c62c-b24a-4203-bd3c-f93434919d1c.png)
+
+2. **Here we have written the flat synthesis netlist of the multiple_module RTL design to a file. Here we used the command ```-noattr``` for easy intepretation of the netlist.**
 
 ![image](https://user-images.githubusercontent.com/75198926/166093358-81e3de70-22b6-452a-9316-b9dd45a33caa.png)
 
+3. **Below is the command used to open the netlist file to read.**
+
 ![image](https://user-images.githubusercontent.com/75198926/166093394-dae92b67-e444-45f5-b64c-bfcee7ceb0f8.png)
+
+**The netlist file generated after flat synthesis of the multiple_module RTL design is as follows :**
 
 ![image](https://user-images.githubusercontent.com/75198926/166093423-3ec1cabb-1975-4d54-8ed3-f06ccb62580a.png)
 
+
+**When we compare the netlists generated through hierarchical synthesis and flat synthesis we observe some critical differences.** 
+- *We can see that in hierarchical synthesized netlist sub_module1 and sub_module2 are still present where as in netlist synthesized using flat synthesis the hierarcies are flattend out and there is single module i.e, multiple_module and all the gates are instantiated directly instead of sub_modules.*
+
 ![image](https://user-images.githubusercontent.com/75198926/166093737-506f0a08-cacd-49c1-8674-5ca34747e5c9.png)
+
+
+**Below is the logic flow diagram of flat synthesized netlist. Clearly we can see that no hierarchy is preserved and hence there are no sub modules in the flow chart instead all the submodules are directly instantiated using standard cells.**  
 
 ![image](https://user-images.githubusercontent.com/75198926/166094368-96268fad-dbb7-4157-8c04-26170df50a40.png)
 
