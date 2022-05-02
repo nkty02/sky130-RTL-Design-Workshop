@@ -594,6 +594,10 @@ Now we are going to do flat synthesis of the multiple_modules.v RTL design to se
 
 **Submodule level synthesis of sub_module1**
 
+**Why sub module level synthesis ?**
+- When our RTL design contains multiple instantiation of the same sub module then we do submodule level synthesis for one time and replicate that result for remaining submodules. This saves a lot of time required for synthesizing main module. 
+- Also when we have massive RTL design containing numerous submodules then synthesizing main modules consumes a lot of time. So we use divide and conquer rule for synthesizing our design and do submodule level synthesize that saves a lot of time for synthesis and testing the design. 
+
 Now we are going to synthesize a sub module named sub_module1 present in multiple_module RTL design. Following are steps followed for synthesis.
 
 1. **So we again invoke the Yosys for synthesis. Then we read the liberty file. Then read the verilog RTL design file using the following commands :**
@@ -619,11 +623,12 @@ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ![image](https://user-images.githubusercontent.com/75198926/166095924-5462a17e-9274-4b58-8c17-400adf445c3b.png)
 
 
-## Various flop coding styles and optimization 
+### Various flop coding styles and optimization 
 
-In this session we will look into how to code flop and how many different types of flops available and different styles of flop coding. 
+In this session we will look into how to code flop and know many different types of flops available and different styles of flop codings. 
 
 **Why flops ?**
+
 In general, a combinational circuit is a digital circuit whose output changes after the circuit's propagation delay for the change in inputs has passed. Due to this propagation delay glitches occur while connecting different devices of different propagation delays. More the number of combinational blocks in the circuits more will be the glitches. If we add more number of combinational blocks in series then our output will be more glitchy and it keeps on changing continuously so we need a new device to store the computed output value and display only under certain conditions. These new devices are called flops that are used to store data. To initialize these flops we have 2 control pins called reset and set pins. 
 
 **Asyncres.v**
