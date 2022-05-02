@@ -702,27 +702,31 @@ This lab session deals with some automatic and interesting optimisations of the 
 
 In the example below, we can see that multiplication of a number(a) by 2 does not require any additional hardware; all that is required is connecting the bits from a to y and grounding the LSB bit of y, as demonstrated by Yosys.
 
+![image](https://user-images.githubusercontent.com/75198926/166197919-a3931abe-d536-4d26-a4b2-8a9380f7470f.png)
+
 The following is the RTL design code for multiplying a number(a) with 2.
 
 ![image](https://user-images.githubusercontent.com/75198926/166106828-d784540e-58ed-45d5-a4da-53d5d114d331.png)
 
+The following is the statistics after performing ```synth -top mul2``` :
+
 ![image](https://user-images.githubusercontent.com/75198926/166107423-3f943d11-8dd6-4cac-8b81-8ebb11d315f4.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166106990-d2fd6694-7fd0-43b7-ba92-f895b3b4d375.png)
-
-![image](https://user-images.githubusercontent.com/75198926/166107012-b389ea9c-d0c7-4fd1-ac6e-27b2fbf1a8e4.png)
+Here while extracting netlist it says that there is no need for extraction as there are no gates in the design.
 
 ![image](https://user-images.githubusercontent.com/75198926/166107024-4707f2e8-f53d-402a-ab62-1eaf392babe8.png)
 
+The logical part of the generated netlist is as follows: *Clearly we can see that multiplication of a number(a) by 2 does not require any additional hardware; all that is required is connecting the bits from a to y and grounding the LSB bit of y*
+
 ![image](https://user-images.githubusercontent.com/75198926/166107057-0e217067-7756-4ed7-9c64-9544243bc933.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166107091-a62cb336-f567-4e44-a311-8426b4ba1831.png)
+The generated netlist file is as follows : Here simply y is assigned as y = {a, 1'h0}
 
 ![image](https://user-images.githubusercontent.com/75198926/166107399-67ae61a2-75b1-4165-b4b5-442c676683ce.png)
 
 
 
-**Mult_8**
+**Multiply with 8**
 
 ![image](https://user-images.githubusercontent.com/75198926/166107575-21bbf740-7dfb-47f8-8b1c-ffcd4cdeacd6.png)
 
