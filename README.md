@@ -825,17 +825,37 @@ Let us consider the following sequential+combinational mixed circuit consisting 
 
 ## Labs on Combinational Logic Optimization
 
+Through this lab session we are going to see some examples on combinational logic optimisation. In yosys we require a unique command to perform combinational optimisation, the command is as follows :
+
+```
+yosys> opt_clean -purge
+```
+
+**Example : 1**
 **opt_check**
+
+The following figure depicts the RTL design of our first combinational circuit : 
  
 ![image](https://user-images.githubusercontent.com/75198926/166110009-06cd2f44-e853-4b87-8e09-0d5fd676b155.png)
- 
- ![image](https://user-images.githubusercontent.com/75198926/166110374-fba5c8f5-6414-4255-809e-6f98ea811b1e.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166110427-60b2efc9-0e71-4682-978c-f891d1f3682b.png)
+
+The following is the statistics after performing synth -top opt_check :
 
 ![image](https://user-images.githubusercontent.com/75198926/166110441-e0578cc2-222a-4991-9f08-df49d20836b5.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166110463-4b1710a2-a878-41b2-b3c1-00b35aad23b2.png)
+
+The logical part of the synthesized netlist is as follows :
+ 
+![image](https://user-images.githubusercontent.com/75198926/166110374-fba5c8f5-6414-4255-809e-6f98ea811b1e.png)
+
+
+
+**Explanation :**
+
+![image](https://user-images.githubusercontent.com/75198926/166231750-a3b1fead-6639-4c4c-8ec7-488a48b229f5.png)
+
+
+
 
 **opt_check2**
 
