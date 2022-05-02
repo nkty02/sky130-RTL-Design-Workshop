@@ -653,9 +653,9 @@ Here we need to note two major instances from the waveform.
 
 ![image](https://user-images.githubusercontent.com/75198926/166105206-8cf3088c-e3eb-4a97-a58d-82f9f72a4ae0.png)
 
-### D-Flipflop with Asynchronous reset
+### D-Flipflop with Asynchronous set
 
-The below figure shows the **Asyncres.v** RTL design file along with the testbench. 
+The below figure shows the **Asyncset.v** RTL design file along with the testbench. 
 
 ![image](https://user-images.githubusercontent.com/75198926/166105705-d082ed71-5c55-4e75-ae2e-cfd778a859f6.png)
 
