@@ -1226,9 +1226,9 @@ In this lab session we will see different types of examples that results in synt
 
 # Day 5: If, case, for loop and for generate
 
-## If case constructs
+## If constructs
 
-If case is mainly used in RTL design for writing priority logics. 
+If statements are mainly used in RTL design for writing priority logics. IF statements are always written inside always block. If we miss any of the conditions i.e., due to incomplete **IF conditions** then there is a chance of getting undesired INFERRED LATCHES into our design.
 
 Syntax for writing **If** statement :
 
@@ -1249,6 +1249,50 @@ else
     ...
   end
 ```
+
+**Good coding style for writing IF statements**
+
+![image](https://user-images.githubusercontent.com/75198926/166292328-bcd768fe-fb60-4ebe-961f-089883cc54fe.png)
+
+
+**Bad coding style which results in inferred latches**
+
+![image](https://user-images.githubusercontent.com/75198926/166293484-a02d9892-b46f-49c1-8794-5d8bdf5a5fff.png)
+
+
+## Case constructs
+
+Case statements are always written inside always block. If we miss any of the conditions i.e., due to incomplete **Case conditions** there is a chance of getting undesired INFERRED LATCHES into our design.
+
+Syntax for writing **Case** statement :
+
+```
+case <sel>
+C1 : begin
+        ...
+        ...
+     end
+C2 : begin
+        ...
+        ...
+     end
+C3 : begin
+        ...
+        ...
+     end
+endcase
+```
+
+**Good coding style for writing case statements**
+
+
+
+
+**Bad coding style which results in inferred latches**
+
+
+
+
 
 
 
