@@ -1101,18 +1101,49 @@ The logical part of the synthesized netlist is as follows :
 
 The following figure depicts the RTL design of our first sequential circuit to be synthesized :
 
-![image](https://user-images.githubusercontent.com/75198926/166119765-b7d82396-1f20-44e6-ad98-b461f0e687c1.png)
+![image](https://user-images.githubusercontent.com/75198926/166119830-a4521a7d-dd05-4058-9120-1ec3792c5e8a.png)
 
 
 The logical part of the synthesized netlist is as follows :
 
-![image](https://user-images.githubusercontent.com/75198926/166119830-a4521a7d-dd05-4058-9120-1ec3792c5e8a.png)
+![image](https://user-images.githubusercontent.com/75198926/166119765-b7d82396-1f20-44e6-ad98-b461f0e687c1.png)
 
 
 
 
 
-# Day 4
+ 
+
+# Day 4: GLS, blocking vs non-blocking and synthesis-simulation mismatch
+
+## GLS concepts and flow using iverilog
+
+**What is GLS ?**
+
+- GLS means Gate Level Simulation. Here for this simulation netlist is used as Design Under Test (DUT). We know that netlist is logically same as RTL code so the same testbench can be used for both simulations i.e., RTL simulation and GLS simulation.
+
+
+**Why GLS ?**
+
+- GLS is used to verify the correctness of the RTL design after synthesis. Because the synthesiser ignores the sensitivity list and only looks at the statements in the procedural block, it infers that the circuit is correct. Simulating the netlist code, on the other hand, will result in a synthesis simulation mismatch.
+
+**Flow using iverilog**
+
+![image](https://user-images.githubusercontent.com/75198926/166248188-9cd8f894-b5e0-4523-85cc-e2a184928cac.png)
+
+
+
+## Synthesis-simulation mismatch
+
+There are three main causes for synthesis-simulation mismatches. They are :
+
+- Missing sensitivity list : To avoid synthesis-simulation mismatch due to missing sensitivity list we generally keep always @(\*) condition while writing always block.
+- Blocking vs non-blocking assignments : 
+  - Inside "always" block 
+    - Blocking : Executes statements in the order written. 
+    - Non-blocking : Executes all the RHS when always block is entered and assigns to LHS.
+- Non standard verilog coding 
+
 
 ## Synthesis simulation mismatch lab
 
