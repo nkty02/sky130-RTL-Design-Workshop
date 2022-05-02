@@ -1550,8 +1550,13 @@ In this session we will see examples which demonstrates how to use for construct
 
 
 # Author
+
+Khyathi N, B.Tech in Electronic and Electrical Communication Engineering at Indian Institute of Technology(IIT) Kharagpur, Kharagpur - 721302
+
+
 # Acknowledgements
-#
-#
-#
-#
+
+[Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)
+
+[Cloud based 5 day workshop on RTL design using verilog with sky130 Technology](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/?awt_a=5L_6&awt_l=Hnigh&awt_m=3j4Twy0KzRZ0Q_6)
+
