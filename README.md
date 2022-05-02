@@ -728,13 +728,27 @@ The generated netlist file is as follows : Here simply y is assigned as y = {a, 
 
 **Multiply with 8**
 
+In the example below, we can see that multiplication of a number(a) by 9 does not require any additional hardware; all that is required is connecting the bits from a to y twice i.e., y = {a, a} as demonstrated by Yosys.
+
+![image](https://user-images.githubusercontent.com/75198926/166199543-d13a3f81-8a3e-42c4-8a17-fad39e07020a.png)
+
+
+The following is the RTL design code for multiplying a number(a) with 9.
+
+![image](https://user-images.githubusercontent.com/75198926/166106828-d784540e-58ed-45d5-a4da-53d5d114d331.png)
+
+
+The following is the statistics after performing ```synth -top mult8``` :
+
 ![image](https://user-images.githubusercontent.com/75198926/166107575-21bbf740-7dfb-47f8-8b1c-ffcd4cdeacd6.png)
+
+
+The generated netlist file is as follows : Here simply y is assigned as y = {a, a}
 
 ![image](https://user-images.githubusercontent.com/75198926/166107697-7476084c-70f6-4da1-96d9-dad5095daaa9.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166107711-383b7097-3cdd-4226-ae97-0aea5c992154.png)
 
-![image](https://user-images.githubusercontent.com/75198926/166107717-366a7b64-433a-4cd9-b56e-ba49b09e90eb.png)
+The logical part of the generated netlist is as follows: *Clearly we can see that multiplication of a number(a) by 9 does not require any additional hardware; all that is required is connecting the bits from a to y twice.*
 
 ![image](https://user-images.githubusercontent.com/75198926/166107769-db3f1832-d799-4a6e-85a0-8ae25bda2b6b.png)
 
