@@ -755,7 +755,19 @@ The logical part of the generated netlist is as follows: *Clearly we can see tha
 
 
 
-# Day 3
+# Day 3: Combinational and sequential optimisations
+
+## Combinational logic optimisations
+
+
+
+
+
+
+
+
+
+
 ## Combi logic optimization
 
 **opt_check**
