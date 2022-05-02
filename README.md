@@ -592,15 +592,29 @@ Now we are going to do flat synthesis of the multiple_modules.v RTL design to se
 
 
 
-**Submodule level synthesis**
+**Submodule level synthesis of sub_module1**
+
+Now we are going to synthesize a sub module named sub_module1 present in multiple_module RTL design. Following are steps followed for synthesis.
+
+1. **So we again invoke the Yosys for synthesis. Then we read the liberty file. Then read the verilog RTL design file using the following commands :**
 
 ![image](https://user-images.githubusercontent.com/75198926/166095863-7808b012-9d0e-4018-b4d3-f2558af53c16.png)
+
+2. **Here we synthesize only the sub module named sub_module1 part inplace of suntheisizing whole RTL design. Now we will synthesize using the following command :**
 
 ![image](https://user-images.githubusercontent.com/75198926/166095844-345540ac-c0db-44ae-b8f5-51bdcefb1a9d.png)
 
 ![image](https://user-images.githubusercontent.com/75198926/166095789-39bc23a3-683f-403a-93df-10a1a306518c.png)
 
+3. **Then we use the following command to extract the netlist using the standard cells present in the library :
+
+```
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
 ![image](https://user-images.githubusercontent.com/75198926/166095832-a0b30255-6112-4259-bfe0-c27ce778a783.png)
+
+4. **Then we use ```show``` command to see the logical part of the netlist. Here as we synthesized sub_module1 which is effectively an AND gate. After synthesis also we got standard and2_0 gate in place of sub_module1.**
 
 ![image](https://user-images.githubusercontent.com/75198926/166095924-5462a17e-9274-4b58-8c17-400adf445c3b.png)
 
